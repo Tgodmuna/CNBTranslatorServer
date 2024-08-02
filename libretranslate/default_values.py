@@ -36,14 +36,14 @@ def _get_value(name, default_value, value_type):
 
 
 _default_options_objects = [
-    {
+       {
         'name': 'HOST',
-        'default_value': '127.0.0.1',
+        'default_value': '0.0.0.0',  
         'value_type': 'str'
     },
     {
         'name': 'PORT',
-        'default_value': 5000,
+        'default_value': int(os.environ.get('PORT', 7000)),  
         'value_type': 'int'
     },
     {
